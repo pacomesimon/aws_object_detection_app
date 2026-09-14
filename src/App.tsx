@@ -170,13 +170,13 @@ export default function App() {
         prev.map((i) =>
           i.id === imageId
             ? {
-                ...i,
-                status: 'done',
-                detections: formattedDetections,
-                summary: data.summary || '',
-                processedAt: new Date().toISOString(),
-                detectedWithModel: getModelLabel(data.model || selectedModel),
-              }
+              ...i,
+              status: 'done',
+              detections: formattedDetections,
+              summary: data.summary || '',
+              processedAt: new Date().toISOString(),
+              detectedWithModel: getModelLabel(data.model || selectedModel),
+            }
             : i
         )
       );
@@ -186,10 +186,10 @@ export default function App() {
         prev.map((i) =>
           i.id === imageId
             ? {
-                ...i,
-                status: 'error',
-                errorMessage: err.message || 'Failed to analyze object detection.',
-              }
+              ...i,
+              status: 'error',
+              errorMessage: err.message || 'Failed to analyze object detection.',
+            }
             : i
         )
       );
