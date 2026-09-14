@@ -232,11 +232,11 @@ app.post("/api/brainstorm-ontology", async (req, res) => {
     const currentClassesSummary =
       Array.isArray(currentOntology) && currentOntology.length > 0
         ? currentOntology
-            .map(
-              (c: any) =>
-                `- "${c.name}": ${c.description || "(no description provided)"}`
-            )
-            .join("\n")
+          .map(
+            (c: any) =>
+              `- "${c.name}": ${c.description || "(no description provided)"}`
+          )
+          .join("\n")
         : "No classes defined yet.";
 
     const systemInstruction = `You are a world-class Computer Vision Taxonomist, Domain Expert, and AI Labeling Architect.
